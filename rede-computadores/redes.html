@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes de Computadores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #34c410;
+            color: #31323d;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .section {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .subsection {
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .subsection:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+        .container {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Redes de Computadores</h1>
+    </header>
+
+        <!-- redes tipos -->
+    <div class="section">
+        <h2>Tipos de Redes de Computadores</h2>
+        <ul>
+            <li class="subsection">LAN (Local Area Network)</li>
+            <div class="hidden">
+                Redes locais que abrangem uma área geográfica limitada, como uma casa, escritório ou campus. Exemplo: Wi-Fi doméstico ou redes em empresas.
+                <div class="container">
+                    <h2>O que é uma LAN ?</h2>
+                    <p>Uma Local Area Network (LAN) em casa é uma rede de computadores que abrange uma área geográfica limitada, como uma residência ou escritório. Ela permite que vários dispositivos, como computadores, smartphones e impressoras, se conectem e compartilhem recursos na mesma rede local.</p>
+                </div>
+            
+                <div class="container">
+                    <h2>Configurando uma LAN </h2>
+                    <p>Para configurar uma LAN em casa, você precisará de:</p>
+                    <ul>
+                        <li>Roteador: Um roteador é o componente central de uma LAN e permite que os dispositivos se conectem à rede.</li>
+                        <li>Cabeamento: Use cabos Ethernet para conectar dispositivos ao roteador ou estabeleça uma conexão sem fio via Wi-Fi.</li>
+                        <li>Configuração: Configure o roteador para fornecer acesso à Internet e atribuir endereços IP aos dispositivos.</li>
+                    </ul>
+                </div>
+            
+                <div class="container">
+                    <h2>Benefícios de uma LAN em Casa ou Empresa </h2>
+                    <p>Uma LAN em Casa ou Empresa oferece várias vantagens, incluindo:</p>
+                    <ul>
+                        <li>Compartilhamento de recursos: Os dispositivos podem compartilhar arquivos, impressoras e acesso à Internet.</li>
+                        <li>Conectividade: Todos os dispositivos podem se comunicar facilmente entre si.</li>
+                        <li>Segurança: Você tem controle total sobre a segurança da sua rede local.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <li class="subsection">WAN (Wide Area Network)</li>
+            <div class="hidden">
+                Redes que abrangem uma área geográfica mais ampla, frequentemente ligando várias LANs. Exemplo: Internet, redes de longa distância.
+                <!--asdasdsa wan-->
+                <div class="container">
+                    <h2>O que é uma WAN ?</h2>
+                    <p>Uma WAN é uma rede de área ampla criada por um indivíduo ou organização em sua residência ou escritório. Ela pode ser usada para conectar vários dispositivos em diferentes locais, permitindo a troca de dados em longa distância. Embora não seja tão poderosa quanto as WANs de operadoras, é possível criar uma versão caseira para fins de aprendizado e experimentação.</p>
+                </div>
+            
+                <div class="container">
+                    <h2>Como criar uma WAN caseira</h2>
+                    <p>Para criar uma WAN caseira, você precisará de:</p>
+                    <ul>
+                        <li>Roteadores: Use roteadores que suportem redes WAN, como roteadores de nível empresarial.</li>
+                        <li>Conexão de Internet: Contrate um provedor de serviços de Internet (ISP) com uma conexão de alta velocidade.</li>
+                        <li>Configuração: Configure seus roteadores para estabelecer uma conexão de rede WAN, como VPN ou tunneling.</li>
+                    </ul>
+                </div>
+            
+                <div class="container">
+                    <h2>Considerações importantes</h2>
+                    <p>Criar uma WAN caseira envolve conhecimentos técnicos avançados. Certifique-se de entender os conceitos de roteamento, VPN e segurança de rede antes de tentar configurar sua própria WAN.</p>
+                </div>
+            </div>
+
+            <li class="subsection">MAN (Metropolitan Area Network)</li>
+            <div class="hidden">
+                Redes que cobrem uma área metropolitana, como uma cidade. Exemplo: Redes de fibra óptica de alta velocidade em áreas urbanas.
+                <div class="container">
+                    <h2>O que é uma MAN?</h2>
+                    <p>Uma Metropolitan Area Network (MAN) é uma rede de computadores que cobre uma área metropolitana, como uma cidade ou uma região geográfica maior. Ela é projetada para fornecer conectividade de longa distância em um ambiente urbano e é uma solução intermediária entre LANs (Local Area Networks) e WANs (Wide Area Networks).</p>
+                </div>
+            
+                <div class="container">
+                    <h2>Características de uma MAN</h2>
+                    <p>As MANs compartilham algumas características comuns:</p>
+                    <ul>
+                        <li>Abordagem Geográfica: Elas cobrem uma área geográfica maior do que uma LAN, mas menor do que uma WAN.</li>
+                        <li>Conexões de Alta Velocidade: MANs frequentemente usam conexões de alta velocidade, como fibra óptica, para fornecer conectividade rápida.</li>
+                        <li>Uso Empresarial: Empresas, instituições acadêmicas e órgãos governamentais muitas vezes implementam MANs para interconectar locais em uma cidade.</li>
+                    </ul>
+                </div>
+            
+                <div class="container">
+                    <h2>Exemplo de Aplicação</h2>
+                    <p>Um exemplo comum de aplicação de uma MAN é a interconexão de diversos campi de uma universidade dentro de uma cidade. A MAN permite que esses campi compartilhem recursos, como servidores, bancos de dados e acesso à internet, de forma eficiente e rápida.</p>
+                </div>
+            </div>
+
+            <li class="subsection">PAN (Personal Area Network)</li>
+            <div class="hidden">
+                Redes pessoais que conectam dispositivos próximos a uma pessoa, como smartphones e laptops. Exemplo: Bluetooth.
+                <div class="container">
+                    <h2>O que é uma PAN?</h2>
+                    <p>Uma Personal Area Network (PAN) é uma rede de computadores de curto alcance que conecta dispositivos pessoais, como smartphones, laptops, tablets e dispositivos vestíveis, em torno de uma pessoa. Ela é projetada para atender às necessidades de comunicação e compartilhamento de dados em pequenas áreas, geralmente dentro de alguns metros.</p>
+                </div>
+            
+                <div class="container">
+                    <h2>Características de uma PAN</h2>
+                    <p>As PANs compartilham algumas características comuns:</p>
+                    <ul>
+                        <li>Alcance Limitado: O alcance de uma PAN é geralmente limitado a alguns metros, tornando-a adequada para uso pessoal.</li>
+                        <li>Conexões sem Fio: Muitas PANs usam tecnologias sem fio, como Bluetooth e Wi-Fi, para conectar dispositivos.</li>
+                        <li>Uso Pessoal: As PANs são usadas para facilitar a comunicação e o compartilhamento de dados entre dispositivos pessoais.</li>
+                    </ul>
+                </div>
+            
+                <div class="container">
+                    <h2>Exemplo de Aplicação</h2>
+                    <p>Um exemplo comum de aplicação de uma PAN é o uso de Bluetooth para conectar um smartphone a um fone de ouvido sem fio. Nesse cenário, a PAN permite que os dispositivos pessoais se comuniquem de forma conveniente e sem a necessidade de fios.</p>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <!-- topologia tipos -->
+    <div class="section">
+        <h2>Topologias de Rede</h2>
+        <ul>
+            <li class="subsection">Estrela</li>
+            <div class="hidden">
+                Todos os dispositivos estão conectados a um ponto central, como um switch.
+                <div class="container">
+                    <h2>Características da Topologia em Estrela</h2>
+                    <p>A topologia em estrela apresenta as seguintes características:</p>
+                    <ul>
+                        <li>Centralização: A presença de um ponto central facilita o gerenciamento e a manutenção da rede.</li>
+                        <li>Isolamento: Se um dispositivo falhar, os demais dispositivos na rede não são afetados.</li>
+                        <li>Confiabilidade: A rede em estrela é conhecida por sua confiabilidade e escalabilidade.</li>
+                    </ul>
+                </div>
+            
+                <div class="container">
+                    <h2>Vantagens da Topologia em Estrela</h2>
+                    <p>Alguns benefícios da topologia em estrela incluem:</p>
+                    <ul>
+                        <li>Fácil diagnóstico de problemas: É mais fácil identificar e solucionar problemas de rede em uma topologia em estrela.</li>
+                        <li>Escalabilidade: É simples adicionar novos dispositivos à rede central.</li>
+                        <li>Segurança: A topologia em estrela oferece maior segurança, pois cada dispositivo está isolado dos outros.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <li class="subsection">Anel</li>
+            <div class="hidden">
+                Os dispositivos estão conectados em um formato de anel, onde cada dispositivo está conectado apenas aos dois vizinhos mais próximos.
+                <div class="container">
+                    <h2>O que é a Topologia de Rede em Anel?</h2>
+                    <p>A topologia de rede em anel é um tipo de organização de rede em que cada dispositivo está conectado ao seu dispositivo vizinho, formando um circuito fechado. Os dados circulam pela rede em um único sentido, passando por cada dispositivo até chegar ao destino desejado. Essa topologia é conhecida por sua simplicidade e eficiência.</p>
+                </div>
+            
+                <div class="container">
+                    <h2>Características da Topologia em Anel</h2>
+                    <p>A topologia em anel apresenta as seguintes características:</p>
+                    <ul>
+                        <li>Redundância: A rede em anel oferece alta redundância, uma vez que a quebra de um elo não afeta necessariamente toda a rede.</li>
+                        <li>Latência baixa: Devido à passagem direta dos dados de um dispositivo para outro, a topologia em anel é conhecida por baixa latência.</li>
+                        <li>Complexidade: A instalação e a manutenção de uma rede em anel podem ser mais complexas do que outras topologias.</li>
+                    </ul>
+                </div>
+            
+                <div class="container">
+                    <h2>Vantagens da Topologia em Anel</h2>
+                    <p>Alguns benefícios da topologia em anel incluem:</p>
+                    <ul>
+                        <li>Redundância: A rede permanece operacional, mesmo após a quebra de um elo.</li>
+                        <li>Latência baixa: Os dados circulam rapidamente na rede em um único sentido.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <li class="subsection">Árvore</li>
+            <div class="hidden">
+                Uma hierarquia de dispositivos, com um nó raiz e sub-redes subsequentes.
+                            
+                <div class "container">
+                    <h2>O que é a Topologia de Rede em Árvore?</h2>
+                    <p>A topologia de rede em árvore é uma organização de rede que se assemelha à estrutura de uma árvore, com um nó raiz e ramos subsequentes. Ela combina elementos de topologias em estrela e topologias em barramento, permitindo a criação de redes complexas com hierarquia e eficiência.</p>
+                </div>
+
+                <div class="container">
+                    <h2>Características da Topologia em Árvore</h2>
+                    <p>A topologia em árvore apresenta as seguintes características:</p>
+                    <ul>
+                        <li>Hierarquia: A rede é organizada em níveis hierárquicos, com um nó raiz, subnós e folhas.</li>
+                        <li>Eficiência: Permite o balanceamento do tráfego e evita congestionamentos, tornando-a eficiente em redes grandes.</li>
+                        <li>Escalabilidade: Pode ser facilmente expandida adicionando novos ramos à árvore.</li>
+                    </ul>
+                </div>
+
+                <div class="container">
+                    <h2>Vantagens da Topologia em Árvore</h2>
+                    <p>Alguns benefícios da topologia em árvore incluem:</p>
+                    <ul>
+                        <li>Hierarquia: Permite a organização eficiente de grandes redes com vários níveis de acesso.</li>
+                        <li>Escalabilidade: A rede pode ser facilmente expandida conforme a necessidade, adicionando novos ramos.</li>
+                        <li>Eficiência: Evita congestionamentos e balanceia o tráfego de maneira eficaz.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <li class="subsection">Malha</li>
+            <div class="hidden">
+                Cada dispositivo está interconectado com todos os outros dispositivos.
+                <div class="container">
+                    <h2>Características da Topologia em Malha</h2>
+                    <p>A topologia em malha apresenta as seguintes características:</p>
+                    <ul>
+                        <li>Redundância: Cada dispositivo tem múltiplos caminhos para se comunicar com outros dispositivos, o que aumenta a redundância e a confiabilidade da rede.</li>
+                        <li>Complexidade: A implementação de uma rede em malha pode ser complexa e requer planejamento cuidadoso.</li>
+                        <li>Alta Resiliência: A rede é altamente resistente a falhas, uma vez que pode se adaptar a quebras de conexão.</li>
+                    </ul>
+                </div>
+            
+                <div class="container">
+                    <h2>Vantagens da Topologia em Malha</h2>
+                    <p>Alguns benefícios da topologia em malha incluem:</p>
+                    <ul>
+                        <li>Redundância: A rede é altamente redundante, o que a torna robusta contra falhas.</li>
+                        <li>Confiabilidade: A rede é altamente confiável devido à sua capacidade de se adaptar a falhas.</li>
+                        <li>Flexibilidade: A rede em malha é flexível e escalável, permitindo a adição de dispositivos sem interrupção.</li>
+                    </ul>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <!-- codigos cmd winds -->
+    <div class="section">
+        <h2>Codigos CMD Mais Usados Para Area De Rede</h2>
+        <ul>
+            <li class="subsection">CMD (Prompt de Comando) </li>
+            <div class="hidden">
+                Aqui estão alguns dos comandos do CMD (Prompt de Comando) mais usados em administração de redes no ambiente Windows:
+                <div class="container">
+                    <h2>ipconfig: </h2>
+                    <p>Exibe informações sobre configuração de IP, incluindo endereço IP, máscara de sub-rede, gateway padrão e servidores DNS.</p>
+                </div>
+                <div class="container">
+                    <h2>ping: </h2>
+                    <p>Verifica a conectividade de rede com um host específico, usando seu endereço IP ou nome de domínio.<br>Exemplo: ping google.com</p>
+                </div>
+                <div class="container">
+                    <h2>tracert (ou traceroute em sistemas Unix): </h2>
+                    <p>Rastreia a rota que os pacotes de dados seguem para chegar a um destino, exibindo cada salto (roteador) no caminho.<br>Exemplo: tracert google.com</p>
+                </div>
+                <div class="container">
+                    <h2>netstat: </h2>
+                    <p>Exibe informações sobre portas de rede, conexões ativas e estatísticas da interface de rede.<br>Exemplo: netstat -a (Mostra todas as portas e conexões)</p>
+                </div>
+                <div class="container">
+                    <h2>nslookup: </h2>
+                    <p>Realiza consultas de DNS para obter informações sobre nomes de domínio, endereços IP e registros DNS relacionados.<br>Exemplo: nslookup google.com</p>
+                </div>
+                <div class="container">
+                    <h2>arp: </h2>
+                    <p>Exibe e modifica a tabela ARP (Address Resolution Protocol), que associa endereços IP a endereços MAC em uma rede local.<br>Exemplo: arp -a (Mostra a tabela ARP)</p>
+                </div>
+                <div class="container">
+                    <h2>ipconfig /release e ipconfig /renew: </h2>
+                    <p>Libera e renova o endereço IP atribuído a uma interface de rede, útil para solucionar problemas de conectividade.<br>Exemplo: ipconfig /release, seguido por ipconfig /renew</p>
+                </div>
+                <div class="container">
+                    <h2>net use: </h2>
+                    <p>Conecta a compartilhamentos de rede, mapeando unidades de rede para locais compartilhados.<br>Exemplo: net use Z: \\servidor\nome_da_pasta</p>
+                </div>
+                <div class="container">
+                    <h2>netsh: </h2>
+                    <p> Permite a configuração avançada de vários aspectos da rede, como firewall, configuração de interface, entre outros.<br>netsh firewall show config</p>
+                </div>
+                <div class="container">
+                    <h2>nbtstat: </h2>
+                    <p> Exibe estatísticas e informações de resolução de nomes NetBIOS em uma rede.<br>nbtstat -a hostname (Para obter informações sobre um host específico)</p>
+                </div>
+                <p>Lembre-se de que para executar esses comandos no CMD, é necessário abrir o Prompt de Comando como administrador, especialmente ao usar comandos que afetam a configuração da rede. Além disso, alguns comandos podem exigir privilégios administrativos. Certifique-se de ter os privilégios adequados ao utilizá-los.</p>
+
+            </div>
+        </ul>
+    </div>
+
+<button class="button" id="home">Home</button>
+
+
+
+
+
+    <script>
+            // botton home
+        const homeButton = document.getElementById('home');
+        
+        homeButton.addEventListener("click", function (){
+            window.location.href = "/index.html";
+        });
+
+        // Adiciona um evento de clique para mostrar/ocultar os detalhes dos tópicos
+        const subsections = document.querySelectorAll(".subsection");
+        subsections.forEach(subsection => {
+            subsection.addEventListener("click", () => {
+                const details = subsection.nextElementSibling;
+                details.classList.toggle("hidden");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- links -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- estilo -->
+    <style>
+        :root {
+            --letras-color: #00FF00;
+            --conteiner-backg: black;
+        }
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: var(--conteiner-backg);
+            font-family: "Courier New", monospace;
+            color: var(--letras-color);
+            text-align: center;
+        }
+        h1 {
+            color: var(--letras-color);
+            
+            font-size: 37px;
+        }
+        label {
+            font-size: 22px;
+            
+        }
+        input {
+            font-size: 19px;
+            background-color: #00ff0098;
+            
+        }
+        .button {
+            border:none;
+            background-color: var(--conteiner-backg);
+            color: var(--letras-color);
+            padding: 10px;
+            margin: 10px;
+        }
+        
+    </style>
+    <title>Gerador De Senhas</title>
+</head>
+<body>
+    <h1>Gerador De Senhas</h1>   
+    <!-- conteiner do site -->
+    <main>
+        <div>
+            <label for="leng"> Comprimento Da Senha: </label>
+            <input type="number" id="leng" min="6" max="50" value="6">
+        </div>
+        <div>
+            <label for="uper">Inclui Letras Maiúsculas: </label>
+            <input type="checkbox" id="upper">
+        </div>
+        <div>
+            <label for="lower">Incluir Letras Minusculas: </label>
+            <input type="checkbox" id="lower">
+        </div>
+        <div>
+            <label for="digitos">Incluir Numeros: </label>
+            <input type="checkbox" id="digitos">
+        </div>
+        <div>
+            <label for="simbolos">Inclui Simbolos (!@#$%^&*) </label>
+            <input type="checkbox" id="simbolos">
+        </div>
+        <button  class="button" id="gerar">Gerar Senha</button>
+        <button class="button" id="save">Salvar Senha</button>
+        <button class="button" id="home">Home</button>
+        <div id="password"></div>
+    </main>
+<!-- js -->
+<script>
+    // botton home
+    const homeButton = document.getElementById('home');
+    
+    homeButton.addEventListener("click", function (){
+        window.location.href = "/index.html";
+    });
+    // gerar senha
+
+    document.getElementById('gerar').addEventListener('click', function() {
+            var length = document.getElementById('leng').value;
+            var useUppercase = document.getElementById('upper').checked;
+            var useLowercase = document.getElementById('lower').checked;
+            var useDigits = document.getElementById('digitos').checked;
+            var useSymbols = document.getElementById('simbolos').checked;
+            var password = generatePassword(length, useUppercase, useLowercase, useDigits, useSymbols);
+            document.getElementById('password').textContent = password;
+        });
+
+        document.getElementById('save').addEventListener('click', function() {
+            var password = document.getElementById('password').textContent;
+            if (password) {
+                localStorage.setItem('savedPassword', password);
+                alert('Senha salva no navegador.');
+            }
+        });
+
+        function generatePassword(length, useUppercase, useLowercase, useDigits, useSymbols) {
+            var charset = "";
+            if (useUppercase) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            if (useLowercase) charset += "abcdefghijklmnopqrstuvwxyz";
+            if (useDigits) charset += "0123456789";
+            if (useSymbols) charset += "!@#$%^&*()-_=+";
+            
+            if (charset === "") {
+                return "Selecione pelo menos um conjunto de caracteres.";
+            }
+
+            var password = "";
+            for (var i = 0; i < length; i++) {
+                var randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset.charAt(randomIndex);
+            }
+            return password;
+        }
+
+</script>
+</body>
+</html>
