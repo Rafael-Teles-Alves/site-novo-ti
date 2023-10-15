@@ -1,0 +1,55 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+/* Estilo para o menu lateral */
+ul {
+    list-style: none;
+    padding: 5px;  
+}
+li {
+    padding: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    border-radius: 40px;
+}       
+a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    color: #f4f4f4;
+    background-color: #3b3a3a1e;
+    border-radius: 40px;
+}
+/* Quando o mouse passa sobre um item do menu */
+li:hover {
+    background-color: #8382825d;
+    border-radius: 40px;
+}
+/* Estilo para o cabeçalho no conteúdo principal */
+header {
+    background-color: #008332;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+/* Estilo para as seções no conteúdo principal */
+section {
+    background-color: #e4e1e183;
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Estilo para os títulos das seções */
+h2 {
+    color: #333;
+}
+/* Estilo para os parágrafos nas seções */
+p {
+    color: #666;
+}
+/* Estilos adicionais, se necessário */

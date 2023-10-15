@@ -1,0 +1,57 @@
+/* Estilos para o menu hambúrguer */
+
+.menu {
+    color: #fff;
+    width: 100%;
+    overflow: none;
+    transition: all 0.3s;
+    background-color: rgb(95, 95, 223);
+}
+.menu-toggle {
+    cursor: pointer;
+    width: 15px;
+    background-color:rgb(95, 95, 223);
+    color: rgb(242, 242, 243);
+    padding: 15px;
+    font-size: 30px;
+}
+.menu-list {
+    list-style: none;
+    display: none;
+
+}
+/* Estilos para o menu visível */
+.menu-list.show-menu {
+    display: block;
+    position: relative;
+    top: auto; /* Ajuste a posição conforme necessário */
+    right: 10px; /* Mudei de 'right: 100%' para 'right: 0' para que o menu apareça ao lado direito */
+    padding: 10px; /* Reduzi o valor do padding para 20px */
+    margin: 10px;
+    width: 50%;
+    height: auto;
+    background-color: rgba(75, 75, 185, 0.384);; /* Cor de fundo do menu */
+    box-shadow: 10px 8px 10px 10px rgba(0, 0, 0, 0.699)
+}
+/* Estilos para dispositivos móveis (max-width: 768px) */
+@media (max-width: 768px) {
+    .menu-list {
+        display: none; /* Ocultar o menu não responsivo em dispositivos menores */
+    }
+    .menu-list.show-menu {
+        /* Adicione estilos para o menu visível em dispositivos menores */
+        background-color: rgb(95, 95, 223);
+    }
+    .menu {
+        height: 0;
+        
+    }
+    .menu-toggle {
+        font-size: 30px;
+        padding: 20px;
+        margin: 5px;
+    }
+    h1 {
+        margin-top: 40px;
+    }
+}
