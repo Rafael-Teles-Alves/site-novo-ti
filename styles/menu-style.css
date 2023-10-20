@@ -19,15 +19,21 @@ li {
 a {
     text-decoration: none;
     display: block;
-    padding: 20px;
-    color: #f4f4f4;
-    background-color: #3b3a3a1e;
-    border-radius: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #2484ddcb;
+    border-radius: 30px;
+}a:hover {
+    color: #ffffff;
+    background-color: #1a67a7;
 }
 /* Quando o mouse passa sobre um item do menu */
-li:hover {
-    background-color: #8382825d;
-    border-radius: 40px;
+main {
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
 }
 /* Estilo para o cabeçalho no conteúdo principal */
 header {
@@ -35,14 +41,13 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    border-radius: 5px;
+    
 }
 /* Estilo para as seções no conteúdo principal */
 section {
-    background-color: #e4e1e183;
-    padding: 10px;
-    margin: 5px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
 }
 /* Estilo para os títulos das seções */
 h2 {

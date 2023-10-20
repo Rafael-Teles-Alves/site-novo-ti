@@ -1,23 +1,27 @@
 /* Estilos para o menu hambúrguer */
 
 .menu {
-    color: #fff;
-    width: 100%;
+    width: 40%;
+    margin: 35px;
+    padding: 5px;
     overflow: none;
-    transition: all 0.3s;
-    background-color: rgb(95, 95, 223);
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 1;
 }
 .menu-toggle {
     cursor: pointer;
-    width: 15px;
-    background-color:rgb(95, 95, 223);
-    color: rgb(242, 242, 243);
-    padding: 15px;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    padding: 5px;
     font-size: 30px;
+    position: fixed;
+    z-index: 1;
 }
 .menu-list {
     list-style: none;
     display: none;
+    
 
 }
 /* Estilos para o menu visível */
@@ -26,12 +30,13 @@
     position: relative;
     top: auto; /* Ajuste a posição conforme necessário */
     right: 10px; /* Mudei de 'right: 100%' para 'right: 0' para que o menu apareça ao lado direito */
-    padding: 10px; /* Reduzi o valor do padding para 20px */
+    padding: 25px; /* Reduzi o valor do padding para 20px */
     margin: 10px;
     width: 50%;
     height: auto;
-    background-color: rgba(75, 75, 185, 0.384);; /* Cor de fundo do menu */
-    box-shadow: 10px 8px 10px 10px rgba(0, 0, 0, 0.699)
+    background-color: rgba(14, 117, 19, 0.836);; /* Cor de fundo do menu */
+    box-shadow: 10px 8px 10px 10px rgba(107, 10, 10, 0.452);
+    border-radius: 10px;
 }
 /* Estilos para dispositivos móveis (max-width: 768px) */
 @media (max-width: 768px) {
@@ -47,8 +52,8 @@
         
     }
     .menu-toggle {
-        font-size: 30px;
-        padding: 20px;
+        font-size: 25px;
+        padding: 10px;
         margin: 5px;
     }
     h1 {
