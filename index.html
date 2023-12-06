@@ -4,61 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/menu-style.css">
-    <link rel="stylesheet" href="styles/menu-burger.css">
     <title>Ferramentas Úteis de TI</title>
 </head>
 <body>
     <header>
         <h1>Ferramentas Úteis de TI</h1>
     </header>
-<!-- menu -->
+    <!-- Menu -->
     <nav class="menu">
-        <div class="menu-toggle">&#9776;</div>
         <ul class="menu-list">
             <li><a href="/gera-senha/senha-gerador.html">Senhas</a></li>
             <li><a href="#asd">Hardware</a></li>
             <li><a href="#cvxc">Testes</a></li>
-            <li><a href="/sofware/codigos/codigos.html">Software</a></li>
+            <li><a href="/software/codigos/codigos.html">Software</a></li>
             <li><a href="/rede-computadores/redes.html">Redes e Conectividade</a></li>
             <li><a href="#">IoT (Internet das Coisas)</a></li>
-            <li><a href="#">Programação Web: </a></li>
+            <li><a href="#">Programação Web</a></li>
         </ul>
     </nav>
-<!--conteudo-->
-
+    <!-- Conteúdo -->
     <main>
-
         <section>
             <h2>Gerador de Senhas</h2>
-            <p>Aqui você pode gerar senhas seguras para suas contas online.<a class="p" href="/gera-senha/senha-gerador.html">Gerar Sua Senha</a></p>
+            <p>Aqui você pode gerar senhas seguras para suas contas online. <a class="p" href="/gera-senha/senha-gerador.html">Gerar Sua Senha</a></p>
         </section>
         <section>
-            <h2>Rede De Computadores</h2>
-            <p>Aqui você pode Visitar E Saber Mais Sobre Rede De Computadores.<a class="p" href="/rede-computadores/redes.html">Visite Apagina Clique Aqui</a></p>
+            <h2>Rede de Computadores</h2>
+            <p>Aqui você pode visitar e saber mais sobre Rede de Computadores. <a class="p" href="/rede-computadores/redes.html">Visite a página clicando aqui.</a></p>
         </section>
         <section>
             <h2>CPU-Z</h2>
-            <p>O CPU-Z é uma ferramenta leve que fornece informações detalhadas sobre a CPU, memória, placa-mãe e outros componentes do computador.<a  class="p" href="https://www.cpuid.com/softwares/cpu-z.html"> CPU-Z Para acessar o site deles, clique aqui.</a></p>
+            <p>O CPU-Z é uma ferramenta leve que fornece informações detalhadas sobre a CPU, memória, placa-mãe e outros componentes do computador. <a class="p" href="https://www.cpuid.com/softwares/cpu-z.html">Clique aqui para acessar o site deles.</a></p>
         </section>
         <section>
             <h2>Teste de Velocidade de Internet</h2>
-            <p>Verifique a velocidade de sua conexão de Internet com este teste da<a class="p" href="http://www.fast.com"> Fast.com Para acessar o site deles, clique aqui.</a></p>
+            <p>Verifique a velocidade de sua conexão de Internet com este teste do <a class="p" href="http://www.fast.com">Fast.com. Clique aqui para acessar o site.</a></p>
         </section>
         <section>
-            <h2>Ativar Windos</h2>
+            <h2>Ativar Windows</h2>
             <p>bcdedit -set testsigning OFF</p>
         </section>
     </main>
-
-    <script href="script/menu-burguer.js"></script>
-    <script>
-        const toggleButton = document.querySelector('.menu-toggle');
-        const menuList = document.querySelector('.menu-list');
-
-        toggleButton.addEventListener('click', () => {
-            menuList.classList.toggle('show-menu');
-        });
-
-    </script>
 </body>
 </html>
