@@ -10,6 +10,9 @@
         :root {
             --letras-color: #00FF00;
             --conteiner-backg: black;
+            --bg-button: #333;
+            --bg-input: #00ff0098;
+            --border-input: #444;
         }
         body {
             margin: 0;
@@ -18,29 +21,37 @@
             font-family: "Courier New", monospace;
             color: var(--letras-color);
             text-align: center;
+            padding-top: 20px;
         }
         h1 {
             color: var(--letras-color);
-            
-            font-size: 37px;
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
         label {
-            font-size: 22px;
-            
+            font-size: 1.2rem;
         }
         input {
-            font-size: 19px;
-            background-color: #00ff0098;
-            
+            font-size: 1.1rem;
+            background-color: var(--bg-input);
+            border: 1px solid var(--border-input);
+            padding: 8px;
+            margin-bottom: 10px;
+            color: var(--letras-color);
         }
         .button {
-            border:none;
-            background-color: var(--conteiner-backg);
+            border: none;
+            background-color: var(--bg-button);
             color: var(--letras-color);
-            padding: 10px;
+            padding: 10px 20px;
             margin: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
         }
-        
+        #password {
+            font-size: 1.3rem;
+            margin-top: 20px;
+        }
     </style>
     <title>Gerador De Senhas</title>
 </head>
@@ -68,58 +79,57 @@
             <label for="simbolos">Inclui Simbolos (!@#$%^&*) </label>
             <input type="checkbox" id="simbolos">
         </div>
-        <button  class="button" id="gerar">Gerar Senha</button>
+        <button class="button" id="gerar">Gerar Senha</button>
         <button class="button" id="save">Salvar Senha</button>
         <button class="button" id="home">Home</button>
         <div id="password"></div>
     </main>
-<!-- js -->
-<script>
-    // botton home
-    const homeButton = document.getElementById('home');
-    
-    homeButton.addEventListener("click", function (){
-        window.location.href = "/index.html";
-    });
-    // gerar senha
-
-    document.getElementById('gerar').addEventListener('click', function() {
-            var length = document.getElementById('leng').value;
-            var useUppercase = document.getElementById('upper').checked;
-            var useLowercase = document.getElementById('lower').checked;
-            var useDigits = document.getElementById('digitos').checked;
-            var useSymbols = document.getElementById('simbolos').checked;
-            var password = generatePassword(length, useUppercase, useLowercase, useDigits, useSymbols);
-            document.getElementById('password').textContent = password;
+    <!-- js -->
+    <script>
+        // botton home
+        const homeButton = document.getElementById('home');
+        
+        homeButton.addEventListener("click", function (){
+            window.location.href = "/index.html";
         });
+        // gerar senha
 
-        document.getElementById('save').addEventListener('click', function() {
-            var password = document.getElementById('password').textContent;
-            if (password) {
-                localStorage.setItem('savedPassword', password);
-                alert('Senha salva no navegador.');
+        document.getElementById('gerar').addEventListener('click', function() {
+                var length = document.getElementById('leng').value;
+                var useUppercase = document.getElementById('upper').checked;
+                var useLowercase = document.getElementById('lower').checked;
+                var useDigits = document.getElementById('digitos').checked;
+                var useSymbols = document.getElementById('simbolos').checked;
+                var password = generatePassword(length, useUppercase, useLowercase, useDigits, useSymbols);
+                document.getElementById('password').textContent = password;
+            });
+
+            document.getElementById('save').addEventListener('click', function() {
+                var password = document.getElementById('password').textContent;
+                if (password) {
+                    localStorage.setItem('savedPassword', password);
+                    alert('Senha salva no navegador.');
+                }
+            });
+
+            function generatePassword(length, useUppercase, useLowercase, useDigits, useSymbols) {
+                var charset = "";
+                if (useUppercase) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                if (useLowercase) charset += "abcdefghijklmnopqrstuvwxyz";
+                if (useDigits) charset += "0123456789";
+                if (useSymbols) charset += "!@#$%^&*()-_=+";
+                
+                if (charset === "") {
+                    return "Selecione pelo menos um conjunto de caracteres.";
+                }
+
+                var password = "";
+                for (var i = 0; i < length; i++) {
+                    var randomIndex = Math.floor(Math.random() * charset.length);
+                    password += charset.charAt(randomIndex);
+                }
+                return password;
             }
-        });
-
-        function generatePassword(length, useUppercase, useLowercase, useDigits, useSymbols) {
-            var charset = "";
-            if (useUppercase) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            if (useLowercase) charset += "abcdefghijklmnopqrstuvwxyz";
-            if (useDigits) charset += "0123456789";
-            if (useSymbols) charset += "!@#$%^&*()-_=+";
-            
-            if (charset === "") {
-                return "Selecione pelo menos um conjunto de caracteres.";
-            }
-
-            var password = "";
-            for (var i = 0; i < length; i++) {
-                var randomIndex = Math.floor(Math.random() * charset.length);
-                password += charset.charAt(randomIndex);
-            }
-            return password;
-        }
-
-</script>
+    </script>
 </body>
 </html>

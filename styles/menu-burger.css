@@ -1,62 +1,87 @@
-/* Estilos para o menu hambúrguer */
+/* Reset de estilos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-.menu {
-    width: 40%;
-    margin: 35px;
-    padding: 5px;
-    overflow: none;
-    transition: all 0.5s;
-    position: fixed;
-    z-index: 1;
+/* Estilos do cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
 }
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Estilos do menu de hambúrguer */
 .menu-toggle {
+    font-size: 24px;
     cursor: pointer;
-    margin: 0px;
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    font-size: 30px;
-    position: fixed;
-    z-index: 1;
+    display: none;
+    color: #fff;
 }
+
 .menu-list {
     list-style: none;
-    display: none;
-    
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
+.menu-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
-/* Estilos para o menu visível */
-.menu-list.show-menu {
-    display: block;
-    position: relative;
-    top: auto; /* Ajuste a posição conforme necessário */
-    right: 10px; /* Mudei de 'right: 100%' para 'right: 0' para que o menu apareça ao lado direito */
-    padding: 25px; /* Reduzi o valor do padding para 20px */
-    margin: 10px;
-    width: 50%;
-    height: auto;
-    background-color: rgba(14, 117, 19, 0.836);; /* Cor de fundo do menu */
-    box-shadow: 10px 8px 10px 10px rgba(107, 10, 10, 0.452);
-    border-radius: 10px;
+
+.menu-list li {
+    margin: 0 10px;
 }
-/* Estilos para dispositivos móveis (max-width: 768px) */
+
+.menu-list a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.menu-list a:hover {
+    color: #ddd;
+}
+
+/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
-    .menu-list {
-        display: none; /* Ocultar o menu não responsivo em dispositivos menores */
-    }
-    .menu-list.show-menu {
-        /* Adicione estilos para o menu visível em dispositivos menores */
-        background-color: rgb(95, 95, 223);
-    }
-    .menu {
-        height: 0;
-        
-    }
     .menu-toggle {
-        font-size: 25px;
-        padding: 10px;
-        margin: 5px;
+        display: block;
     }
-    h1 {
-        margin-top: 40px;
+
+    .menu-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .menu-list.show-menu {
+        display: block;
+    }
+
+    .menu-list ul {
+        flex-direction: column;
+    }
+
+    .menu-list li {
+        margin: 10px 0;
     }
 }
